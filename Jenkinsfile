@@ -1,7 +1,7 @@
 pipeline {
     
     agent {
-        label 'aks-default-24169752'
+        label 'velero'
     }
    
     stages {
