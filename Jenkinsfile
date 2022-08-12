@@ -5,7 +5,7 @@ pipeline {
     stages {
         
          stage('Initialize'){
-            def dockerHome = 'c:\Program Files\Docker\cli-plugins'
+            def dockerHome = 'c:/Program Files/Docker/cli-plugins'
             env.PATH = "${dockerHome}/bin:${env.PATH}"
         }
         
