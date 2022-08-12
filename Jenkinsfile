@@ -9,7 +9,7 @@ pipeline {
                }
            }
         }
-        stage("deploy") {   
+        stage("build") {   
             steps {
                 sh 'docker --version'
             }
