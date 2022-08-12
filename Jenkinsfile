@@ -25,7 +25,7 @@ pipeline {
         stage("deploy") {
             
             steps {
-                echo 'Hola mundo'
+                sh 'docker --version'
             }
         }
     }   
