@@ -3,24 +3,16 @@ pipeline {
     stages {
         stage("Initialize") {
            steps {
-                def dockerHome = tool 'myDocker'
-                env.PATH = "${dockerHome}/bin:${env.PATH}"
-        }
-        stage("build") {
-           steps {
-                echo 'testing the application'
-            }
-        }
-        stage("test") {   
-            steps {
-                echo 'testing the application'
-            }
+               script {
+                    def dockerHome = tool 'myDocker'
+                    env.PATH = "${dockerHome}/bin:${env.PATH}"
+               }
+           }
         }
         stage("deploy") {   
             steps {
                 sh 'docker --version'
             }
-          }
-       }
+        }
     }   
 }
