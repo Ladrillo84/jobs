@@ -23,11 +23,7 @@ pipeline {
         stage("deploy") {
             
             steps {
-                script{
-                    sh ''' 
-                    velero --help
-                    '''
-                    }
+                sh 'velero --help'
             }
         }
     }   
