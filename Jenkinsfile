@@ -21,7 +21,11 @@ pipeline {
         stage("deploy") {
             
             steps {
-                echo 'deploying the application'
+                script{
+                    sh ''' 
+                    docker images
+                    '''
+                    }
             }
         }
     }   
