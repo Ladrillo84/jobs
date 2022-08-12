@@ -1,6 +1,8 @@
 pipeline {
     
-    agent any
+    agent {
+        label 'aks-default-24169752'
+    }
    
     stages {
         
