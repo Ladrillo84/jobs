@@ -1,14 +1,17 @@
 pipeline {
     
-    agent none
-   
+    agent any
+    
     stages {
         
+         stage('Initialize'){
+            def dockerHome = tool 'myDocker'
+            env.PATH = "${dockerHome}/bin:${env.PATH}"
+        }
+        
         stage("build") {
-            agent {docker 'maven:3.8.1-adoptopenjdk-11'}
-            steps {
-                echo 'building the application'
-                sh 'mvn --version'
+           steps {
+                echo 'testing the application'
             }
         }
         
