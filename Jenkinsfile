@@ -12,6 +12,7 @@ pipeline {
       steps {  // no container directive is needed as the maven container is the default
         //sh "mvn clean install"   
         sh "mvn --help"   
+        sh "ls -l"
       }
     }
     stage('Build Docker Image') {
