@@ -14,10 +14,5 @@ pipeline {
                 sh 'docker --version'
             }
         }
-        stage("deploy") {   
-            steps {
-                echo '$AZURE_BACKUP_RESOURCE_GROUP'
-            }
-        }
     }   
 }
